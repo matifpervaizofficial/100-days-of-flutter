@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:phoneaccessories/pages/loginPage.dart';
 import 'package:phoneaccessories/utils/routes.dart';
-import 'package:phoneaccessories/utils/themes.dart';
+import 'package:phoneaccessories/widgets/themes.dart';
 
 import 'pages/home_page.dart';
 import 'pages/signup.dart';
@@ -25,6 +25,7 @@ class MobileAcc extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       //initialRoute: MyRoutes.homeRoute,
       initialRoute: MyRoutes.homeRoute,
+
       routes: {
         //here we don't need to specify the object
         MyRoutes.homeRoute: (context) => HomePage(),
