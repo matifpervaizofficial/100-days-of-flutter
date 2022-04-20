@@ -1,9 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:phoneaccessories/pages/home_page.dart';
 import 'package:phoneaccessories/utils/routes.dart';
 
 class LoginPage extends StatefulWidget {

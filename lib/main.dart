@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:phoneaccessories/pages/loginPage.dart';
 import 'package:phoneaccessories/utils/routes.dart';
+import 'package:phoneaccessories/utils/themes.dart';
 
 import 'pages/home_page.dart';
 import 'pages/signup.dart';
@@ -16,17 +17,14 @@ class MobileAcc extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       themeMode: ThemeMode.light,
-      //properties of light theme
-      theme: ThemeData(
-          //primary swatch means k sab colors ko primary color k sath adjust kr dyn
-          primarySwatch: Colors.deepPurple),
-      //properties of light theme
-      darkTheme: ThemeData(brightness: Brightness.dark),
+      //properties of light theme calling from themes.dart
+      theme: MyThemes.lightTheme(context),
+      //properties of light theme calling from themes.dart
+      darkTheme: MyThemes.darkTheme(context),
       //routes means ap 1 screen sy kis screen pay jana chahty hain
       debugShowCheckedModeBanner: false,
       //initialRoute: MyRoutes.homeRoute,
       initialRoute: MyRoutes.homeRoute,
-
       routes: {
         //here we don't need to specify the object
         MyRoutes.homeRoute: (context) => HomePage(),

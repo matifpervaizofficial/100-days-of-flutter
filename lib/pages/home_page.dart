@@ -9,10 +9,16 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: Container(
-        child: Text("data"),
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: Center(
+          child: Text(
+            "Cellphone Catalog",
+            style: TextStyle(color: Colors.black),
+          ),
+        ),
       ),
+      body: Container(),
       drawer: DrawerPage(),
     );
   }
