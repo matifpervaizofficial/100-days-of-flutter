@@ -1,6 +1,6 @@
 class CatalogModel {
   //static islye kia ta k catalog model use kr k is items ko show kia ja sky
-  static final items = [
+  static List<Item> items = [
     Item(
         id: "mh1",
         name: "iPhone 12 Pro",
@@ -27,4 +27,26 @@ class Item {
       required this.color,
       required this.imageUrl,
       required this.desc});
+  // we use factory in order to initialize the constructor on some logics
+  // factory also help us to chose which one constructor do u want to call
+  factory Item.fromMap(Map<String, dynamic> map) {
+    Item(
+      id: map["id"],
+      name: map["name"],
+      price: map["price"],
+      color: map["color"],
+      imageUrl: map["imageUrl"],
+      desc: map["desc"],
+    );
+  }
+  //class sy map bnana
+  //opposite to the map
+  toMap() => {
+        "id": id,
+        "name": name,
+        "price": price,
+        "color": color,
+        "imageUrl": imageUrl,
+        "desc": desc
+      };
 }
