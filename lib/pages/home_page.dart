@@ -6,7 +6,9 @@ import 'package:phoneaccessories/models/Catalog.dart';
 import '../widgets/itemview.dart';
 
 class HomePage extends StatelessWidget {
-  final dummylist = List.generate(50, (index) => CatalogModel.items[0]);
+  /* dummy list is just declared to check how our layout will looks like
+  when a number of lists show on apps
+  */
 
   @override
   Widget build(BuildContext context) {
@@ -23,9 +25,9 @@ class HomePage extends StatelessWidget {
       //builder provides us a recycler view and render just list on the screen
       // listview is a scrollable arra y
       body: ListView.builder(
-        itemCount: dummylist.length,
+        itemCount: CatalogModel.items.length,
         itemBuilder: (context, index) {
-          return ItemView(item: dummylist[index]);
+          return ItemView(item: CatalogModel.items[index]);
         },
       ),
       drawer: DrawerPage(),
